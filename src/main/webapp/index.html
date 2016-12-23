@@ -6,20 +6,81 @@
 	<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-	<table>
-		<tr>
-			<td style='width: 30%;'>
-				<img class = "newappIcon" src='images/newapp-icon.png'>
-			</td>
-			<td>
-				<!-- The "Hello World!" message comes from /SimpleServlet -->
-				<h1 id = "message"></h1>
-				
-				<p class='description'></p> Thanks for creating a <span class="blue">Liberty for Java Starter Application</span>.
-			</td>
-		</tr>
-	</table>
-	<!-- Call SimpleServlet to get the "Hello World" message  -->
-	<script type="text/javascript" src="index.js"></script>
+<h1 style="text-align:center">Blood Compatability Program</h1>
+	<form id="myAjaxRequestForm">
+		<fieldset id="donorFormId">
+<legend>Donor Registration Form</legend>
+<ul>
+<li><p><label for="name">Name:</label><input id="name" type="text"name="code" class="donorClass" /></p></li>
+<li><p><label for="address">Address:</label><input id="address"type="text" name="name" class="donorClass" /></p></li>
+<li><p><label for="mobile">Mobile No.:</label><input id="mobile"type="text" name="name" class="donorClass" /></p></li>
+<li><p><label for="bloodGroup">Blood Group:</label>
+ <select id="bloodGroup">
+  <option value="A+">A+</option>
+  <option value="B+">B+</option>
+  <option value="O+">O+</option>
+  <option value="AB+">AB+</option>
+  <option value="A-">A-</option>
+  <option value="B-">B-</option>
+  <option value="AB-">AB-</option>
+  <option value="O-">O-</option>
+ 
+</select> 
+<!-- <input id="bloodGroup"type="text" name="name" class="donorClass" /> --></p></li>
+<li><p><input id="addDonor" type="button" value="Add Donors" /></p></li>
+<li><p><input id="donorsubmit" type="button" value="Submit" /></p></li>
+</ul>
+</fieldset>
+		<h3 id="donorId"  style="background-color: #b3ccff;width:50%">Donor Details</h1>
+		<table id="donorTable">
+			<tr>
+				<th>Name</th>
+				<th>Address</th>
+				<th>Mobile</th>
+				<th>Blood Group</th>
+			</tr>
+		</table>
+		<p></p>
+<fieldset id="patientFormId">
+<legend>Patient Registration Form</legend>
+<ul>
+<li><p><label for="name">Name:</label><input id="pname" type="text"name="pname" /></p></li>
+<li><p><label for="address">Address:</label><input id="paddress"type="text" name="paddress" /></p></li>
+<li><p><label for="mobile">Mobile No:</label><input id="pmobile"type="text" name="pmobile" /></p></li>
+<li><p><label for="pbloodGroup">Blood Group:</label>
+ <select id="pbloodGroup">
+  <option value="A+">A+</option>
+  <option value="B+">B+</option>
+  <option value="O+">O+</option>
+  <option value="AB+">AB+</option>
+  <option value="A-">A-</option>
+  <option value="B-">B-</option>
+  <option value="AB-">AB-</option>
+  <option value="O-">O-</option>
+ 
+</select> 
+<!-- <input id="pbloodGroup"type="text" name="pbloodGroup" /> --></p></li>
+<li><p><input id="addPatient" type="button" value="Add Patient" /></p></li>
+<li><p><input id="patientsubmit" type="button" value="Submit" /></p></li>
+</ul>
+</fieldset>
+		<h3 id="patientId" style="background-color: #b3ccff;width:50%">Patient Details</h1>
+		<table id="patientTable">
+			<tr>
+				<th>Name</th>
+				<th>Address</th>
+				<th>Mobile</th>
+				<th>Blood Group</th>
+			</tr>
+		</table>
+		<h3 id="resultTableId" style="background-color: #b3ccff;width:50%">Compatablity Matched</h1>
+		<table id="resultTable">
+			<tr>
+				<th>PatientName</th>
+				<th>DonorName</th>
+			</tr>
+		</table>
+</form>
+<p><input type="button" id="findCompatability"value="Find Eligible Match" /></p>
 </body>
 </html>
