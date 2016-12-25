@@ -1,5 +1,5 @@
 applications:
-- path: target/BloodComptabilty.war
+- path: target/BloodComptability.war
   memory: 512M
   instances: 1
   domain: mybluemix.net
